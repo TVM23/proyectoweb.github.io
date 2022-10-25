@@ -1,0 +1,293 @@
+:root{
+    --primario: #6774F1;
+    --rojo: #C70000;
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --gris: #757575;
+    --gris_claro: #F7F7F7;
+}
+
+/* Generales */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{ 
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisazulado) 0%, var(--blanco) 100%);
+}
+
+img{
+    width: 100%;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: auto; 
+}
+
+.menu-nav{
+    display: block;
+}
+
+.encabezado{
+    display: block;
+}
+
+.menu-arriba{
+    display: flex;
+    background-color: var(--gris_claro);
+    justify-content: space-around;
+}
+
+.contenedor-logo{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 6.3rem;
+    height: 6.3rem;
+    cursor: pointer;
+}
+
+.busqueda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.barra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.icono-busqueda{
+    margin-right: 1rem;
+}
+
+.barra input{
+    border: 1px solid var(--gris);
+    width: 100%;
+    height: 4rem;
+    padding: 0 2rem;
+    font-size: 1.8rem;
+    color: var(--oscuro);
+    font-weight: normal;
+    outline: none;
+    border-radius: 1rem;
+}
+
+.iconos{
+    display: flex;
+    gap: 3.2rem;
+}
+
+.usuario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.carrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-hamburguesa{
+    display: none;
+}
+
+@media (max-width:900px){ 
+    .menu-hamburguesa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .carrito{
+        display: none;
+    }
+}
+
+.menu-abajo{
+    background-color: var(--primario);
+    margin-bottom: 1rem;
+}
+
+.navegacion-principal{
+    display: flex;
+    justify-content: space-evenly;
+    height: 6.3rem;
+
+    z-index: 1000;
+
+    transition: all 0.5s ease; 
+}
+
+.navegacion-principal ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+
+    gap: 10rem;
+
+    z-index: 1000;
+
+}
+
+.navegacion-principal a{
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 1.2rem 2rem;
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--blanco);
+    color: var(--primario);
+    height: auto;
+
+    transition: all 0.5s ease; 
+}
+
+.navegacion-principal ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2.3rem;
+    width: 15rem;
+}
+
+.navegacion-principal ul li ul{
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+
+    border: 1px solid var(--primario);
+    color: var(--primario);
+}
+
+.navegacion-principal ul li ul a{
+    border: 1px solid var(--primario);
+    color: var(--primario);
+
+    font-size: 1.1rem;
+
+    padding: 1rem;
+
+    display: flex;
+    justify-content: flex-start;
+
+    height: 3.5rem;
+
+    background-color: var(--blanco);
+}
+
+.expandir-icono{
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.navegacion-principal ul li ul a:hover{
+    border: 1px solid var(--blanco);
+    color: var(--blanco);
+    background-color: var(--primario);
+
+    transition: all 0.5s ease; 
+
+    height: 3.5rem;
+}
+
+.navegacion-principal ul li ul li{
+    width: 15rem;
+
+    position: relative;
+
+}
+
+.navegacion-principal ul li ul li ul{
+    position: absolute;
+    top: 0;
+    left: 15rem;
+    z-index: 1;
+}
+
+.navegacion-principal ul li ul li ul a{
+    padding: 1rem;
+}
+
+.navegacion-principal ul li ul{
+    display: none;
+}
+
+.navegacion-principal ul li:hover > ul{
+    display: block;
+    
+}
+
+
+
+/* ---------------------------------- */
+
+/* .nav-opcion{
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    width: 15rem;
+    cursor: pointer;
+} */
+
+/* .navegacion-principal a{
+    display: flex;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+}
+ */
+.navegacion-principal p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--blanco);
+    height: auto;
+    width: auto;
+}
+
+.nav-opcion :hover,
+.navegacion-principal p :hover{
+    background-color: var(--blanco);
+    color: var(--primario) !important;
+    width: 15rem;
+    height: auto;
+}
+  
